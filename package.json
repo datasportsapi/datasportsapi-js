@@ -1,0 +1,50 @@
+{
+  "name": "datasportsapi",
+  "version": "0.0.1",
+  "description": "Official client for the DataSportsAPI sports data API (pre-release: a minimal client; the full SDK arrives with 0.1).",
+  "keywords": [
+    "sports",
+    "sports-api",
+    "sports-data",
+    "live-scores",
+    "football",
+    "api-client",
+    "datasportsapi"
+  ],
+  "homepage": "https://datasportsapi.com/sdks/typescript/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datasportsapi/datasportsapi-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/datasportsapi/datasportsapi-js/issues"
+  },
+  "license": "MIT",
+  "author": "Noventra Software Ltd (https://datasportsapi.com)",
+  "type": "commonjs",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.cjs",
+    "index.mjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "test": "node test.mjs"
+  }
+}
