@@ -3,7 +3,7 @@
 The official JavaScript and TypeScript client for [DataSportsAPI](https://datasportsapi.com),
 a sports data API: live scores, fixtures, lineups, statistics and standings for 24 sports.
 
-> **Pre-release.** The API opens at launch; until then requests do not get an answer.
+> **Live API, minimal client.** The API answers today (free key: https://datasportsapi.com/signup/).
 > This 0.0.x release is a minimal client: one authenticated `get()` with typed errors.
 > The full SDK (a typed method for every endpoint, paging, retries and the WebSocket
 > stream) arrives with 0.1. Docs: <https://datasportsapi.com/docs/sdks/>

@@ -5,7 +5,7 @@
 // endpoint, paging, retries, the WebSocket stream) arrives with 0.1.
 
 const DEFAULT_BASE_URL = "https://api.datasportsapi.com";
-const VERSION = "0.0.1";
+const VERSION = "0.0.2";
 
 function fromEnv(name) {
   return typeof process !== "undefined" && process.env ? process.env[name] : undefined;
