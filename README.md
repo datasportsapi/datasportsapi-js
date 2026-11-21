@@ -32,4 +32,4 @@ try {
   ES module or with `require`.
 - Get a key at <https://datasportsapi.com/signup/>.
 
-MIT licensed. © Noventra Software Ltd.
+MIT licensed. © DataSportsAPI.

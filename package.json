@@ -20,7 +20,7 @@
     "url": "https://github.com/datasportsapi/datasportsapi-js/issues"
   },
   "license": "MIT",
-  "author": "Noventra Software Ltd (https://datasportsapi.com)",
+  "author": "DataSportsAPI (https://datasportsapi.com)",
   "type": "commonjs",
   "main": "./index.cjs",
   "module": "./index.mjs",
