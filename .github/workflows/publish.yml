@@ -1,0 +1,30 @@
+# Publishes the package to npm when a version tag (v0.0.2, …) is pushed, or by hand
+# from the Actions tab. No token: npm trusts this workflow (Trusted Publishing,
+# package datasportsapi → Settings → Trusted publisher: GitHub Actions,
+# datasportsapi/datasportsapi-js, workflow publish.yml, environment npm).
+name: Publish to npm
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+      - name: npm with trusted publishing (11.5.1 or later)
+        run: npm install -g npm@latest
+      - name: Test
+        run: node test.mjs
+      - name: Publish
+        run: npm publish --access public
