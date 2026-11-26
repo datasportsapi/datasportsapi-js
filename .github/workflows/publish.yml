@@ -1,7 +1,9 @@
-# Publishes the package to npm when a version tag (v0.0.2, …) is pushed, or by hand
+# Publishes the package to npm when a version tag (v0.1.0, …) is pushed, or by hand
 # from the Actions tab. No token: npm trusts this workflow (Trusted Publishing,
 # package datasportsapi → Settings → Trusted publisher: GitHub Actions,
 # datasportsapi/datasportsapi-js, workflow publish.yml, environment npm).
+# This job installs nothing but npm itself: no third-party code runs next to the
+# publishing credential.
 name: Publish to npm
 
 on:
@@ -22,9 +24,13 @@ jobs:
         with:
           node-version: "22"
           registry-url: "https://registry.npmjs.org"
+      - name: No secrets in the package
+        run: node scan-secrets.mjs .
+      - name: Version matches the tag
+        run: test "v$(node -p 'require("./package.json").version')" = "${GITHUB_REF_NAME}" || test "${GITHUB_EVENT_NAME}" = workflow_dispatch
       - name: npm with trusted publishing (11.5.1 or later)
         run: npm install -g npm@latest
       - name: Test
         run: node test.mjs
       - name: Publish
-        run: npm publish --access public
+        run: npm publish --access public --provenance

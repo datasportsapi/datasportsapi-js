@@ -1,14 +1,16 @@
 {
   "name": "datasportsapi",
-  "version": "0.0.2",
-  "description": "Official client for the DataSportsAPI sports data API (pre-release: a minimal client; the full SDK arrives with 0.1).",
+  "version": "0.1.0",
+  "description": "Official TypeScript/JavaScript client for the DataSportsAPI sports data API: a typed method per endpoint, retries, paging and the live WebSocket stream.",
   "keywords": [
     "sports",
     "sports-api",
     "sports-data",
     "live-scores",
     "football",
+    "websocket",
     "api-client",
+    "typescript",
     "datasportsapi"
   ],
   "homepage": "https://datasportsapi.com/sdks/typescript/",
@@ -27,9 +29,14 @@
   "types": "./index.d.ts",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.mjs",
-      "require": "./index.cjs"
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.cjs"
+      }
     },
     "./package.json": "./package.json"
   },
@@ -37,11 +44,13 @@
     "index.cjs",
     "index.mjs",
     "index.d.ts",
+    "index.d.mts",
+    "operations.cjs",
     "README.md",
     "LICENSE"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "sideEffects": false,
   "scripts": {

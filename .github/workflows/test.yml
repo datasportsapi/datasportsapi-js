@@ -1,0 +1,29 @@
+# Tests on every push: the offline suite, the secret scan and the type declarations.
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["22", "24"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node scan-secrets.mjs .
+      - run: node test.mjs
+      - name: Type declarations compile with the README's samples
+        run: |
+          npm install --no-save --ignore-scripts typescript@5.9.3 @types/node@22
+          mkdir -p types-test/node_modules && ln -sfn ../.. types-test/node_modules/datasportsapi
+          npx tsc -p types-test
