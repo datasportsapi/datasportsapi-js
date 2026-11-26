@@ -1,5 +1,6 @@
 // Compile-only check: the samples on https://datasportsapi.com/sdks/typescript/ (src/data/sdks.ts)
-// must type-check against index.d.ts. Run: npx tsc -p sdk/js/types-test
+// must type-check against index.d.mts (the import resolves to this package by its own name).
+// Run: npx tsc -p sdk/js/types-test
 import DataSportsAPIDefault, { DataSportsAPI, NotFoundError, PermissionDeniedError, type Fixture } from "datasportsapi";
 
 declare const apiKey: string;

@@ -9,5 +9,5 @@
     "skipLibCheck": false,
     "exactOptionalPropertyTypes": false
   },
-  "files": ["samples.ts", "samples-cjs.cts"]
+  "files": ["samples.mts", "samples-cjs.cts"]
 }

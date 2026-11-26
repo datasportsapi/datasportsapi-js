@@ -25,5 +25,4 @@ jobs:
       - name: Type declarations compile with the README's samples
         run: |
           npm install --no-save --ignore-scripts typescript@5.9.3 @types/node@22
-          mkdir -p types-test/node_modules && ln -sfn ../.. types-test/node_modules/datasportsapi
           npx tsc -p types-test
