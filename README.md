@@ -134,4 +134,9 @@ drops finished ones from the lists. Events: `open`, `frame`, every frame type (`
   client refuses one unless you pass `dangerouslyAllowBrowser: true`. Call the API from your
   server and keep the key in an environment variable or a secret manager.
 
+## Help
+
+Questions, ideas and what you built: the [developer Discord](https://datasportsapi.com/discord) (#javascript), or
+[hello@datasportsapi.com](mailto:hello@datasportsapi.com). Guide: https://datasportsapi.com/sdks/typescript/
+
 MIT licensed. © DataSportsAPI.
