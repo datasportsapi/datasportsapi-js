@@ -163,7 +163,6 @@ module.exports = {
     {"id":"tracking.ball","group":"tracking","name":"ball","method":"GET","path":"/v2/fixtures/{id}/tracking/ball","pathParams":["id"],"query":["since","limit"],"body":false,"paged":null},
     {"id":"tracking.events","group":"tracking","name":"events","method":"GET","path":"/v2/fixtures/{id}/tracking/events","pathParams":["id"],"query":["type","since","page"],"body":false,"paged":{"cursor":false}},
     {"id":"tracking.timeline","group":"tracking","name":"timeline","method":"GET","path":"/v2/fixtures/{id}/tracking/timeline","pathParams":["id"],"query":[],"body":false,"paged":null},
-    {"id":"tracking.players","group":"tracking","name":"players","method":"GET","path":"/v2/fixtures/{id}/tracking/players","pathParams":["id"],"query":["after","since","limit","fps"],"body":false,"paged":null},
     {"id":"exports.create","group":"exports","name":"create","method":"POST","path":"/v2/exports","pathParams":[],"query":[],"body":true,"paged":null},
     {"id":"exports.list","group":"exports","name":"list","method":"GET","path":"/v2/exports","pathParams":[],"query":[],"body":false,"paged":null},
     {"id":"exports.get","group":"exports","name":"get","method":"GET","path":"/v2/exports/{id}","pathParams":["id"],"query":[],"body":false,"paged":null},

@@ -126,7 +126,7 @@ const until = async (cond, ms = 3000) => {
 /* ------------------------------------------------------------------ client */
 
 test("exports and version", () => {
-  assert.equal(VERSION, "0.1.0");
+  assert.equal(VERSION, "0.2.0");
   assert.equal(cjs.DataSportsAPI, DataSportsAPI);
   assert.equal(cjs.default, DataSportsAPI);
 });

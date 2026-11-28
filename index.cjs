@@ -7,7 +7,7 @@
 
 const { operations: OPERATIONS, ticketPath: TICKET_PATH } = require("./operations.cjs");
 
-const VERSION = "0.1.0";
+const VERSION = "0.2.0";
 const DEFAULT_BASE_URL = "https://api.datasportsapi.com";
 const KEY_ENV = "DATASPORTSAPI_API_KEY";
 const BASE_ENV = "DATASPORTSAPI_BASE_URL";

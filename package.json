@@ -1,6 +1,6 @@
 {
   "name": "datasportsapi",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Official TypeScript/JavaScript client for the DataSportsAPI sports data API: a typed method per endpoint, retries, paging and the live WebSocket stream.",
   "keywords": [
     "sports",
